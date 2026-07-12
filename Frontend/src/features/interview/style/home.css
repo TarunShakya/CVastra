@@ -265,6 +265,40 @@
   transform: scale(0.98);
 }
 
+.bottom-bar {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.logout-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #161b22;
+  border: 1px solid #2a3348;
+  border-radius: 0.5rem;
+  color: #7d8590;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background-color 0.2s;
+}
+.logout-button svg {
+  color: inherit;
+}
+.logout-button:hover {
+  border-color: #ff2d78;
+  color: #ff2d78;
+  background-color: rgba(255, 45, 120, 0.08);
+}
+.logout-button:active {
+  transform: scale(0.97);
+}
+
 .recent-reports {
   display: flex;
   flex-direction: column;
