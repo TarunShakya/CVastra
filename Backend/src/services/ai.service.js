@@ -176,6 +176,9 @@ async function generatePdfFromHtml(htmlContent) {
         ? await chromium.executablePath()
         : chromium.executablePath
 
+    console.log("DEBUG chromium.executablePath type:", typeof chromium.executablePath)
+    console.log("DEBUG resolved executablePath value:", executablePath)
+
     const browser = await puppeteer.launch({
         args: chromium.args,
         executablePath,
