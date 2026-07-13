@@ -1,7 +1,6 @@
 const { GoogleGenAI, Type } = require("@google/genai")
 const { z } = require("zod")
 const puppeteer = require("puppeteer-core")
-const chromium = require("@sparticuz/chromium")
 
 const ai = new GoogleGenAI({
     apiKey: process.env.GOOGLE_GENAI_API_KEY
@@ -172,6 +171,8 @@ async function generateInterviewReport({ resume, selfDescription, jobDescription
 
 
 async function generatePdfFromHtml(htmlContent) {
+    const { default: chromium } = await import("@sparticuz/chromium")
+
     const executablePath = typeof chromium.executablePath === "function"
         ? await chromium.executablePath()
         : chromium.executablePath
